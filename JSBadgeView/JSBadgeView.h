@@ -25,7 +25,8 @@ typedef enum {
     JSBadgeViewAlignmentBottomLeft,
     JSBadgeViewAlignmentBottomRight,
     JSBadgeViewAlignmentBottomCenter,
-    JSBadgeViewAlignmentCenter
+    JSBadgeViewAlignmentCenter,
+	JSBadgeViewAlignmentCustom
 } JSBadgeViewAlignment;
 
 @interface JSBadgeView : UIView
@@ -39,6 +40,7 @@ typedef enum {
 @property (nonatomic, strong) UIColor *badgeTextColor;
 @property (nonatomic, assign) CGSize badgeTextShadowOffset;
 @property (nonatomic, strong) UIColor *badgeTextShadowColor;
+@property (nonatomic, assign) CGPoint customOrigin;
 
 @property (nonatomic, strong) UIFont *badgeTextFont;
 
@@ -64,5 +66,7 @@ typedef enum {
  * @discussion optionally init using this method to have the badge automatically added to another view.
  */
 - (id)initWithParentView:(UIView *)parentView alignment:(JSBadgeViewAlignment)alignment;
+
+- (id)initWithParentView:(UIView *)parentView customOrigin:(CGPoint)origin;
 
 @end

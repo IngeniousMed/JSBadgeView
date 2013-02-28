@@ -92,6 +92,18 @@
     return self;
 }
 
+- (id)initWithParentView:(UIView *)parentView customOrigin:(CGPoint)origin
+{
+    if ((self = [self initWithFrame:CGRectZero]))
+    {
+		_customOrigin = origin;
+        self.badgeAlignment = JSBadgeViewAlignmentCustom;
+        [parentView addSubview:self];
+    }
+    
+    return self;
+}
+
 - (void)_init
 {    
     self.backgroundColor = [UIColor clearColor];
@@ -160,6 +172,10 @@
             newFrame.origin.x = (superviewWidth - viewWidth) / 2.0f;
             newFrame.origin.y = (superviewHeight - viewHeight) / 2.0f;
             break;
+		case JSBadgeViewAlignmentCustom:
+			newFrame.origin.x = self.customOrigin.x;
+			newFrame.origin.y = self.customOrigin.y;
+			break;
         default:
             NSAssert(NO, @"Unimplemented JSBadgeAligment type %d", self.badgeAlignment);
     }
@@ -216,6 +232,9 @@
             case JSBadgeViewAlignmentCenter:
                 self.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
                 break;
+			case JSBadgeViewAlignmentCustom:
+				
+				break;
             default:
                 NSAssert(NO, @"Unimplemented JSBadgeAligment type %d", self.badgeAlignment);
         }
