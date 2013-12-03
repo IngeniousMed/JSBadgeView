@@ -200,6 +200,43 @@ static BOOL JSBadgeViewIsUIKitFlatMode(void)
             newFrame.origin.x = (superviewWidth - viewWidth) / 2.0f;
             newFrame.origin.y = (superviewHeight - viewHeight) / 2.0f;
             break;
+		case JSBadgeViewAlignmentMessagesIpadPortrait:
+            newFrame.origin.x = 670.0f;
+            newFrame.origin.y = 22.0f;
+            break;
+		case JSBadgeViewAlignmentMessagesIpadLandscape:
+            newFrame.origin.x = 605.0f;
+            newFrame.origin.y = 22.0f;
+            break;
+		case JSBadgeViewAlignmentSettingsIpadPortrait:
+            newFrame.origin.x = 728.0f;
+            newFrame.origin.y = 22.0f;
+            break;
+		case JSBadgeViewAlignmentSettingsIpadLandscape:
+            newFrame.origin.x = 663.0f;
+            newFrame.origin.y = 22.0f;
+            break;
+		case JSBadgeViewAlignmentMessagesIphoneIOS7:
+            newFrame.origin.x = 30.0f;
+            newFrame.origin.y = 2.0f;
+            break;
+		case JSBadgeViewAlignmentSettingsIphoneIOS7:
+            newFrame.origin.x = 306.0f;
+            newFrame.origin.y = 2.0f;
+            break;
+		case JSBadgeViewAlignmentMessagesIphoneIOS6:
+            newFrame.origin.x = 30.0f;
+            newFrame.origin.y = -7.0f;
+            break;
+		case JSBadgeViewAlignmentSettingsIphoneIOS6:
+            newFrame.origin.x = 304.0f;
+            newFrame.origin.y = -7.0f;
+            break;
+
+		case JSBadgeViewAlignmentUnansweredPQRSIphone:
+            newFrame.origin.x = 40.0f;
+            newFrame.origin.y = 35.0f;
+            break;
         default:
             NSAssert(NO, @"Unimplemented JSBadgeAligment type %d", self.badgeAlignment);
     }
