@@ -201,35 +201,51 @@ static BOOL JSBadgeViewIsUIKitFlatMode(void)
             newFrame.origin.y = (superviewHeight - viewHeight) / 2.0f;
             break;
 		case JSBadgeViewAlignmentMessagesIpadPortrait:
-            newFrame.origin.x = 670.0f;
-            newFrame.origin.y = 22.0f;
+            newFrame.origin.x = 682.0f;
+            newFrame.origin.y = 17.0f;
             break;
 		case JSBadgeViewAlignmentMessagesIpadLandscape:
-            newFrame.origin.x = 605.0f;
-            newFrame.origin.y = 22.0f;
+            newFrame.origin.x = 618.0f;
+            newFrame.origin.y = 17.0f;
             break;
 		case JSBadgeViewAlignmentSettingsIpadPortrait:
-            newFrame.origin.x = 728.0f;
-            newFrame.origin.y = 22.0f;
+            newFrame.origin.x = 740.0f;
+            newFrame.origin.y = 17.0f;
             break;
 		case JSBadgeViewAlignmentSettingsIpadLandscape:
-            newFrame.origin.x = 663.0f;
-            newFrame.origin.y = 22.0f;
+            newFrame.origin.x = 674.0f;
+            newFrame.origin.y = 17.0f;
+            break;
+		case JSBadgeViewAlignmentMessagesIpadPortraitIOS6:
+            newFrame.origin.x = 678.0f;
+            newFrame.origin.y = -4.0f;
+            break;
+		case JSBadgeViewAlignmentMessagesIpadLandscapeIOS6:
+            newFrame.origin.x = 612.0f;
+            newFrame.origin.y = -4.0f;
+            break;
+		case JSBadgeViewAlignmentSettingsIpadPortraitIOS6:
+            newFrame.origin.x = 734.0f;
+            newFrame.origin.y = -3.0f;
+            break;
+		case JSBadgeViewAlignmentSettingsIpadLandscapeIOS6:
+            newFrame.origin.x = 669.0f;
+            newFrame.origin.y = -3.0f;
             break;
 		case JSBadgeViewAlignmentMessagesIphoneIOS7:
-            newFrame.origin.x = 30.0f;
+            newFrame.origin.x = 37.0f;
             newFrame.origin.y = 2.0f;
             break;
 		case JSBadgeViewAlignmentSettingsIphoneIOS7:
-            newFrame.origin.x = 306.0f;
+            newFrame.origin.x = 310.0f;
             newFrame.origin.y = 2.0f;
             break;
 		case JSBadgeViewAlignmentMessagesIphoneIOS6:
-            newFrame.origin.x = 30.0f;
+            newFrame.origin.x = 39.0f;
             newFrame.origin.y = -7.0f;
             break;
 		case JSBadgeViewAlignmentSettingsIphoneIOS6:
-            newFrame.origin.x = 304.0f;
+            newFrame.origin.x = 306.0f;
             newFrame.origin.y = -7.0f;
             break;
 
