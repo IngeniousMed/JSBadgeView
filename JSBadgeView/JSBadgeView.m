@@ -253,6 +253,46 @@ static BOOL JSBadgeViewIsUIKitFlatMode(void)
             newFrame.origin.x = 40.0f;
             newFrame.origin.y = 35.0f;
             break;
+		case JSBadgeViewAlignmentBillIphone:
+            newFrame.origin.x = 35.0f;
+            newFrame.origin.y = 525.0f;
+            break;
+			break;
+		case JSBadgeViewAlignmentBillIphoneLandscape:
+            newFrame.origin.x = 60.0f;
+            newFrame.origin.y = 280.0f;
+            break;
+		case JSBadgeViewAlignmentBillIpadLandscape:
+			newFrame.origin.x = 55.0f;
+            newFrame.origin.y = 570.0f;
+			break;
+		case JSBadgeViewAlignmentPatientIphone:
+            newFrame.origin.x = 100.0f;
+            newFrame.origin.y = 525.0f;
+            break;
+			break;
+		case JSBadgeViewAlignmentPatientIphoneLandscape:
+            newFrame.origin.x = 175.0f;
+            newFrame.origin.y = 280.0f;
+            break;
+		case JSBadgeViewAlignmentPatientIpadLandscape:
+			newFrame.origin.x = 170.0f;
+            newFrame.origin.y = 570.0f;
+			break;
+		case JSBadgeViewAlignmentXCoverIphone:
+            newFrame.origin.x = 165.0f;
+            newFrame.origin.y = 525.0f;
+            break;
+			break;
+		case JSBadgeViewAlignmentXCoverIphoneLandscape:
+            newFrame.origin.x = 285.0f;
+            newFrame.origin.y = 280.0f;
+            break;
+		case JSBadgeViewAlignmentXCoverIpadLandscape:
+			newFrame.origin.x = 270.0f;
+            newFrame.origin.y = 570.0f;
+			break;
+			
         default:
             NSAssert(NO, @"Unimplemented JSBadgeAligment type %d", self.badgeAlignment);
     }
