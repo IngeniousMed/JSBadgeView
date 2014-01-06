@@ -254,16 +254,16 @@ static BOOL JSBadgeViewIsUIKitFlatMode(void)
             newFrame.origin.y = 35.0f;
             break;
 		case JSBadgeViewAlignmentBillIphone:
-            newFrame.origin.x = 35.0f;
+            newFrame.origin.x = 37.0f;
             newFrame.origin.y = 525.0f;
             break;
 			break;
 		case JSBadgeViewAlignmentBillIphoneLandscape:
-            newFrame.origin.x = 60.0f;
+            newFrame.origin.x = 70.0f;
             newFrame.origin.y = 280.0f;
             break;
 		case JSBadgeViewAlignmentBillIpadLandscape:
-			newFrame.origin.x = 55.0f;
+			newFrame.origin.x = 59.0f;
             newFrame.origin.y = 570.0f;
 			break;
 		case JSBadgeViewAlignmentPatientIphone:
@@ -272,7 +272,7 @@ static BOOL JSBadgeViewIsUIKitFlatMode(void)
             break;
 			break;
 		case JSBadgeViewAlignmentPatientIphoneLandscape:
-            newFrame.origin.x = 175.0f;
+            newFrame.origin.x = 185.0f;
             newFrame.origin.y = 280.0f;
             break;
 		case JSBadgeViewAlignmentPatientIpadLandscape:
@@ -285,13 +285,40 @@ static BOOL JSBadgeViewIsUIKitFlatMode(void)
             break;
 			break;
 		case JSBadgeViewAlignmentXCoverIphoneLandscape:
-            newFrame.origin.x = 285.0f;
+            newFrame.origin.x = 295.0f;
             newFrame.origin.y = 280.0f;
             break;
 		case JSBadgeViewAlignmentXCoverIpadLandscape:
-			newFrame.origin.x = 270.0f;
+			newFrame.origin.x = 278.0f;
             newFrame.origin.y = 570.0f;
 			break;
+		case JSBadgeViewAlignmentBillListIphone:
+            newFrame.origin.x = 232.0f;
+            newFrame.origin.y = 525.0f;
+            break;
+			break;
+		case JSBadgeViewAlignmentBillListIphoneLandscape:
+            newFrame.origin.x = 408.0f;
+            newFrame.origin.y = 280.0f;
+            break;
+		case JSBadgeViewAlignmentBillListIpadLandscape:
+			newFrame.origin.x = 389.0f;
+            newFrame.origin.y = 570.0f;
+			break;
+		case JSBadgeViewAlignmentPQRSIphone:
+            newFrame.origin.x = 296.0f;
+            newFrame.origin.y = 525.0f;
+            break;
+			break;
+		case JSBadgeViewAlignmentPQRSIphoneLandscape:
+            newFrame.origin.x = 523.0f;
+            newFrame.origin.y = 280.0f;
+            break;
+		case JSBadgeViewAlignmentPQRSIpadLandscape:
+			newFrame.origin.x = 499.0f;
+            newFrame.origin.y = 570.0f;
+			break;
+
 			
         default:
             NSAssert(NO, @"Unimplemented JSBadgeAligment type %d", self.badgeAlignment);

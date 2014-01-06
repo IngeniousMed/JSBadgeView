@@ -48,16 +48,20 @@ typedef NS_ENUM(NSUInteger, JSBadgeViewAlignment)
 	JSBadgeViewAlignmentUnansweredPQRSIphone,
 	JSBadgeViewAlignmentBillIphone,
 	JSBadgeViewAlignmentBillIphoneLandscape,
-	JSBadgeViewAlignmentBillIpad,
 	JSBadgeViewAlignmentBillIpadLandscape,
 	JSBadgeViewAlignmentPatientIphone,
 	JSBadgeViewAlignmentPatientIphoneLandscape,
-	JSBadgeViewAlignmentPatientIpad,
 	JSBadgeViewAlignmentPatientIpadLandscape,
 	JSBadgeViewAlignmentXCoverIphone,
 	JSBadgeViewAlignmentXCoverIphoneLandscape,
-	JSBadgeViewAlignmentXCoverIpad,
-	JSBadgeViewAlignmentXCoverIpadLandscape
+	JSBadgeViewAlignmentXCoverIpadLandscape,
+	JSBadgeViewAlignmentBillListIphone,
+	JSBadgeViewAlignmentBillListIphoneLandscape,
+	JSBadgeViewAlignmentBillListIpadLandscape,
+	JSBadgeViewAlignmentPQRSIphone,
+	JSBadgeViewAlignmentPQRSIphoneLandscape,
+	JSBadgeViewAlignmentPQRSIpadLandscape
+
 	
 };
 
