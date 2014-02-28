@@ -65,9 +65,13 @@ typedef NS_ENUM(NSUInteger, JSBadgeViewAlignment)
 	JSBadgeViewAlignmentPQRSIphone,
 	JSBadgeViewAlignmentPQRSIphone4IOS7,
 	JSBadgeViewAlignmentPQRSIphoneLandscape,
-	JSBadgeViewAlignmentPQRSIpadLandscape
-
+	JSBadgeViewAlignmentPQRSIpadLandscape,
 	
+	JSBadgeViewAlignmentCareTeamIphone,
+	JSBadgeViewAlignmentCareTeamIphone4IOS7,
+	JSBadgeViewAlignmentCareTeamIphoneLandscape,
+	JSBadgeViewAlignmentCareTeamIpadLandscape
+
 };
 
 @interface JSBadgeView : UIView
