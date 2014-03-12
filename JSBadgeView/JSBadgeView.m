@@ -45,31 +45,51 @@ static const CGFloat JSBadgeViewHeight = 16.0f;
 static const CGFloat JSBadgeViewTextSideMargin = 8.0f;
 static const CGFloat JSBadgeViewCornerRadius = 10.0f;
 
-// Thanks to Peter Steinberger: https://gist.github.com/steipete/6526860
-static BOOL JSBadgeViewIsUIKitFlatMode(void)
-{
-    static BOOL isUIKitFlatMode = NO;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
+//// Thanks to Peter Steinberger: https://gist.github.com/steipete/6526860
+//static BOOL JSBadgeViewIsUIKitFlatMode(void)
+//{
+//    static BOOL isUIKitFlatMode = NO;
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//#ifndef kCFCoreFoundationVersionNumber_iOS_7_0
+//#define kCFCoreFoundationVersionNumber_iOS_7_0 847.2
+//#endif
+//
+//        if (kCFCoreFoundationVersionNumber >= kCFCoreFoundationVersionNumber_iOS_7_0)
+//        {
+//            // If your app is running in legacy mode, tintColor will be nil - else it must be set to some color.
+//            if (UIApplication.sharedApplication.keyWindow)
+//            {
+//                isUIKitFlatMode = [UIApplication.sharedApplication.keyWindow performSelector:@selector(tintColor)] != nil;
+//            }
+//            else
+//            {
+//                // Possible that we're called early on (e.g. when used in a Storyboard). Adapt and use a temporary window.
+//                isUIKitFlatMode = [[[UIWindow alloc] init] performSelector:@selector(tintColor)] != nil;
+//            }
+//        }
+//    });
+//
+//    return isUIKitFlatMode;
+//}
+
+int32_t
+NSVersionOfLinkTimeLibrary(const char* libraryName);
+
+// Taken from http://PSPDFKit.com. This snippet is under public domain.
+#define UIKitVersionNumber_iOS_7_0 0xB57
 #ifndef kCFCoreFoundationVersionNumber_iOS_7_0
 #define kCFCoreFoundationVersionNumber_iOS_7_0 847.2
 #endif
-
-        if (kCFCoreFoundationVersionNumber >= kCFCoreFoundationVersionNumber_iOS_7_0)
-        {
-            // If your app is running in legacy mode, tintColor will be nil - else it must be set to some color.
-            if (UIApplication.sharedApplication.keyWindow)
-            {
-                isUIKitFlatMode = [UIApplication.sharedApplication.keyWindow performSelector:@selector(tintColor)] != nil;
-            }
-            else
-            {
-                // Possible that we're called early on (e.g. when used in a Storyboard). Adapt and use a temporary window.
-                isUIKitFlatMode = [[[UIWindow alloc] init] performSelector:@selector(tintColor)] != nil;
-            }
+BOOL PSPDFIsUIKitFlatMode(void) {
+    static BOOL isUIKitFlatMode = NO;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        // We get the modern UIKit if system is running >= iOS 7 and we were linked with >= SDK 7.
+        if (kCFCoreFoundationVersionNumber >= kCFCoreFoundationVersionNumber_iOS_7_0) {
+            isUIKitFlatMode = (NSVersionOfLinkTimeLibrary("UIKit") >> 16) >= UIKitVersionNumber_iOS_7_0;
         }
     });
-
     return isUIKitFlatMode;
 }
 
@@ -115,7 +135,7 @@ static BOOL JSBadgeViewIsUIKitFlatMode(void)
     {
         [self applyCommonStyle];
 
-        if (JSBadgeViewIsUIKitFlatMode())
+        if (PSPDFIsUIKitFlatMode())
         {
             [self applyIOS7Style];
         }
