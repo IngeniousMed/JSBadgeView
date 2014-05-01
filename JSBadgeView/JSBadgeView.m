@@ -125,7 +125,7 @@ BOOL PSPDFIsUIKitFlatMode(void) {
     badgeViewAppearanceProxy.badgeOverlayColor = UIColor.clearColor;
     badgeViewAppearanceProxy.badgeTextShadowColor = UIColor.clearColor;
     badgeViewAppearanceProxy.badgeShadowColor = UIColor.clearColor;
-    badgeViewAppearanceProxy.badgeStrokeWidth = 0.0f;
+    badgeViewAppearanceProxy.badgeStrokeWidth = 2.0f;
     badgeViewAppearanceProxy.badgeStrokeColor = badgeViewAppearanceProxy.badgeBackgroundColor;
 }
 
@@ -174,7 +174,7 @@ BOOL PSPDFIsUIKitFlatMode(void) {
     const CGFloat textWidth = [self sizeOfTextForCurrentSettings].width;
 
     const CGFloat marginToDrawInside = [self marginToDrawInside];
-    const CGFloat viewWidth = textWidth + JSBadgeViewTextSideMargin + (marginToDrawInside * 2);
+    const CGFloat viewWidth = textWidth + JSBadgeViewTextSideMargin + (marginToDrawInside * 2) + 2;
     const CGFloat viewHeight = JSBadgeViewHeight + (marginToDrawInside * 2);
     
     const CGFloat superviewWidth = superviewBounds.size.width;
@@ -285,7 +285,11 @@ BOOL PSPDFIsUIKitFlatMode(void) {
             newFrame.origin.y = 280.0f;
             break;
 		case JSBadgeViewAlignmentBillIpadLandscape:
-			newFrame.origin.x = 59.0f;
+			newFrame.origin.x = 57.0f;
+            newFrame.origin.y = 566.0f;
+			break;
+		case JSBadgeViewAlignmentBillIpadLandscapeIOS6:
+			newFrame.origin.x = 57.0f;
             newFrame.origin.y = 570.0f;
 			break;
 		case JSBadgeViewAlignmentPatientIphone:
@@ -301,7 +305,11 @@ BOOL PSPDFIsUIKitFlatMode(void) {
             newFrame.origin.y = 280.0f;
             break;
 		case JSBadgeViewAlignmentPatientIpadLandscape:
-			newFrame.origin.x = 170.0f;
+			newFrame.origin.x = 168.0f;
+            newFrame.origin.y = 566.0f;
+			break;
+		case JSBadgeViewAlignmentPatientIpadLandscapeIOS6:
+			newFrame.origin.x = 168.0f;
             newFrame.origin.y = 570.0f;
 			break;
 		case JSBadgeViewAlignmentXCoverIphone:
@@ -317,7 +325,11 @@ BOOL PSPDFIsUIKitFlatMode(void) {
             newFrame.origin.y = 280.0f;
             break;
 		case JSBadgeViewAlignmentXCoverIpadLandscape:
-			newFrame.origin.x = 278.0f;
+			newFrame.origin.x = 276.0f;
+            newFrame.origin.y = 566.0f;
+			break;
+		case JSBadgeViewAlignmentXCoverIpadLandscapeIOS6:
+			newFrame.origin.x = 276.0f;
             newFrame.origin.y = 570.0f;
 			break;
 		case JSBadgeViewAlignmentBillListIphone:
@@ -333,7 +345,11 @@ BOOL PSPDFIsUIKitFlatMode(void) {
             newFrame.origin.y = 280.0f;
             break;
 		case JSBadgeViewAlignmentBillListIpadLandscape:
-			newFrame.origin.x = 389.0f;
+			newFrame.origin.x = 387.0f;
+            newFrame.origin.y = 566.0f;
+			break;
+		case JSBadgeViewAlignmentBillListIpadLandscapeIOS6:
+			newFrame.origin.x = 387.0f;
             newFrame.origin.y = 570.0f;
 			break;
 		case JSBadgeViewAlignmentPQRSIphone:
@@ -349,9 +365,13 @@ BOOL PSPDFIsUIKitFlatMode(void) {
             newFrame.origin.y = 280.0f;
             break;
 		case JSBadgeViewAlignmentPQRSIpadLandscape:
-			newFrame.origin.x = 499.0f;
+			newFrame.origin.x = 497.0f;
+            newFrame.origin.y = 566.0f;
+			break;
+		case JSBadgeViewAlignmentPQRSIpadLandscapeIOS6:
+			newFrame.origin.x = 497.0f;
             newFrame.origin.y = 570.0f;
-			
+			break;
 		case JSBadgeViewAlignmentCareTeamIphone:
             newFrame.origin.x = 296.0f;
             newFrame.origin.y = 525.0f;
@@ -365,10 +385,16 @@ BOOL PSPDFIsUIKitFlatMode(void) {
             newFrame.origin.y = 280.0f;
             break;
 		case JSBadgeViewAlignmentCareTeamIpadLandscape:
-			newFrame.origin.x = 499.0f;
-            newFrame.origin.y = 570.0f;
+			newFrame.origin.x = 497.0f;
+            newFrame.origin.y = 566.0f;
 
 			break;
+		case JSBadgeViewAlignmentCareTeamIpadLandscapeIOS6:
+			newFrame.origin.x = 497.0f;
+            newFrame.origin.y = 570.0f;
+			
+			break;
+
 
 			
         default:
