@@ -274,15 +274,11 @@ BOOL PSPDFIsUIKitFlatMode(void) {
             break;
 		case JSBadgeViewAlignmentBillIphone:
             newFrame.origin.x = 37.0f;
-            newFrame.origin.y = 525.0f;
+            newFrame.origin.y = 520.0f;
             break;
 		case JSBadgeViewAlignmentBillIphone4IOS7:
             newFrame.origin.x = 37.0f;
             newFrame.origin.y = 435.0f;
-            break;
-		case JSBadgeViewAlignmentBillIphoneLandscape:
-            newFrame.origin.x = 70.0f;
-            newFrame.origin.y = 280.0f;
             break;
 		case JSBadgeViewAlignmentBillIpadLandscape:
 			newFrame.origin.x = 57.0f;
@@ -294,15 +290,11 @@ BOOL PSPDFIsUIKitFlatMode(void) {
 			break;
 		case JSBadgeViewAlignmentPatientIphone:
             newFrame.origin.x = 100.0f;
-            newFrame.origin.y = 525.0f;
+            newFrame.origin.y = 520.0f;
             break;
 		case JSBadgeViewAlignmentPatientIphone4IOS7:
             newFrame.origin.x = 100.0f;
             newFrame.origin.y = 435.0f;
-            break;
-		case JSBadgeViewAlignmentPatientIphoneLandscape:
-            newFrame.origin.x = 185.0f;
-            newFrame.origin.y = 280.0f;
             break;
 		case JSBadgeViewAlignmentPatientIpadLandscape:
 			newFrame.origin.x = 168.0f;
@@ -314,15 +306,11 @@ BOOL PSPDFIsUIKitFlatMode(void) {
 			break;
 		case JSBadgeViewAlignmentXCoverIphone:
             newFrame.origin.x = 165.0f;
-            newFrame.origin.y = 525.0f;
+            newFrame.origin.y = 520.0f;
             break;
 		case JSBadgeViewAlignmentXCoverIphone4IOS7:
             newFrame.origin.x = 165.0f;
             newFrame.origin.y = 435.0f;
-            break;
-		case JSBadgeViewAlignmentXCoverIphoneLandscape:
-            newFrame.origin.x = 295.0f;
-            newFrame.origin.y = 280.0f;
             break;
 		case JSBadgeViewAlignmentXCoverIpadLandscape:
 			newFrame.origin.x = 276.0f;
@@ -334,15 +322,11 @@ BOOL PSPDFIsUIKitFlatMode(void) {
 			break;
 		case JSBadgeViewAlignmentBillListIphone:
             newFrame.origin.x = 232.0f;
-            newFrame.origin.y = 525.0f;
+            newFrame.origin.y = 520.0f;
             break;
 		case JSBadgeViewAlignmentBillListIphone4IOS7:
             newFrame.origin.x = 232.0f;
             newFrame.origin.y = 435.0f;
-            break;
-		case JSBadgeViewAlignmentBillListIphoneLandscape:
-            newFrame.origin.x = 408.0f;
-            newFrame.origin.y = 280.0f;
             break;
 		case JSBadgeViewAlignmentBillListIpadLandscape:
 			newFrame.origin.x = 387.0f;
@@ -354,15 +338,11 @@ BOOL PSPDFIsUIKitFlatMode(void) {
 			break;
 		case JSBadgeViewAlignmentPQRSIphone:
             newFrame.origin.x = 296.0f;
-            newFrame.origin.y = 525.0f;
+            newFrame.origin.y = 520.0f;
             break;
 		case JSBadgeViewAlignmentPQRSIphone4IOS7:
             newFrame.origin.x = 296.0f;
             newFrame.origin.y = 435.0f;
-            break;
-		case JSBadgeViewAlignmentPQRSIphoneLandscape:
-            newFrame.origin.x = 523.0f;
-            newFrame.origin.y = 280.0f;
             break;
 		case JSBadgeViewAlignmentPQRSIpadLandscape:
 			newFrame.origin.x = 497.0f;
@@ -374,29 +354,20 @@ BOOL PSPDFIsUIKitFlatMode(void) {
 			break;
 		case JSBadgeViewAlignmentCareTeamIphone:
             newFrame.origin.x = 296.0f;
-            newFrame.origin.y = 525.0f;
+            newFrame.origin.y = 520.0f;
             break;
 		case JSBadgeViewAlignmentCareTeamIphone4IOS7:
             newFrame.origin.x = 296.0f;
             newFrame.origin.y = 435.0f;
             break;
-		case JSBadgeViewAlignmentCareTeamIphoneLandscape:
-            newFrame.origin.x = 523.0f;
-            newFrame.origin.y = 280.0f;
-            break;
 		case JSBadgeViewAlignmentCareTeamIpadLandscape:
 			newFrame.origin.x = 497.0f;
             newFrame.origin.y = 566.0f;
-
 			break;
 		case JSBadgeViewAlignmentCareTeamIpadLandscapeIOS6:
 			newFrame.origin.x = 497.0f;
             newFrame.origin.y = 570.0f;
-			
 			break;
-
-
-			
         default:
             NSAssert(NO, @"Unimplemented JSBadgeAligment type %d", self.badgeAlignment);
     }
