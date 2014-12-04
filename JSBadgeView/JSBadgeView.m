@@ -369,7 +369,7 @@ BOOL PSPDFIsUIKitFlatMode(void) {
             newFrame.origin.y = 570.0f;
 			break;
         default:
-            NSAssert(NO, @"Unimplemented JSBadgeAligment type %d", self.badgeAlignment);
+            NSAssert(NO, @"Unimplemented JSBadgeAligment type %lu", (long)self.badgeAlignment);
     }
     
     newFrame.origin.x += _badgePositionAdjustment.x;
