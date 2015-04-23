@@ -100,7 +100,6 @@ BOOL PSPDFIsUIKitFlatMode(void) {
     JSBadgeView *badgeViewAppearanceProxy = JSBadgeView.appearance;
 
     badgeViewAppearanceProxy.backgroundColor = UIColor.clearColor;
-    badgeViewAppearanceProxy.badgeAlignment = JSBadgeViewAlignmentTopRight;
     badgeViewAppearanceProxy.badgeBackgroundColor = UIColor.redColor;
     badgeViewAppearanceProxy.badgeTextFont = [UIFont boldSystemFontOfSize:UIFont.systemFontSize];
     badgeViewAppearanceProxy.badgeTextColor = UIColor.whiteColor;
